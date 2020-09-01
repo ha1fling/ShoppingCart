@@ -2,9 +2,14 @@
     {{ message }}
     <br/>
     {% for item in basket %}
-        <br/>
-        <div>{{ item.attributes.name }}</div>
-        <div>{{ item.attributes.cost }}</div>
-        <br/>
+        {% include 'partials/basket_item.html' %}
     {% endfor %}
 </div>
+
+<style>
+    .basket {
+    width: 95%;
+    height: 95%;
+    background-color: #cccccc;
+}
+</style>
