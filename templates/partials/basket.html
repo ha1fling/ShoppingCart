@@ -1,3 +1,10 @@
 <div class="basket">
-    basket is empty
+    {{ message }}
+    <br/>
+    {% for item in basket %}
+        <br/>
+        <div>{{ item.attributes.name }}</div>
+        <div>{{ item.attributes.cost }}</div>
+        <br/>
+    {% endfor %}
 </div>
