@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, redirect
 from items import data
 from basket import basket, basket_message, add_to_basket, delete_from_basket, delete_all_from_basket, calculate_total
 
-app = Flask(__name__)
 
+app = Flask(__name__)
 
 @app.route('/')
 def display_page():
@@ -30,3 +30,9 @@ def delete_item():
 def clear_basket():
     delete_all_from_basket()
     return redirect("/")
+
+@app.route('/checkout', methods=['post'])
+def checkout():
+    total = calculate_total()
+    delete_all_from_basket()
+    return render_template('reciept.html', total=total, basket=basket, items=data)
