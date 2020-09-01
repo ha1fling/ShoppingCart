@@ -25,3 +25,10 @@ def delete_from_basket(item):
 
 def delete_all_from_basket():
     basket.clear()
+
+
+def calculate_total():
+    total = 0.00
+    for obj in basket:
+        total = total + obj[1]['attributes']['cost']
+    return total
