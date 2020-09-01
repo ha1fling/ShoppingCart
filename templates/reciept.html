@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Shopping application</title>
+    <meta name="description" content="Shopping application">
+    <meta name="author" content="Jenny Potts">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styles/main.css">
+</head>
+<body>
+<header>
+    {% include 'partials/header.html' %}
+</header>
+<div class="d-flex align-items-center flex-column">
+    <p>Your items:</p>
+    {% for item in basket %}
+        <div>{{ item[1].attributes.name }}</div>
+        <div>£{{ item[1].attributes.cost }}</div>
+        <br/>
+    {% endfor %}
+    <p>{% include 'partials/total_cost.html' %}</p>
+    <button><a href="/" action="/display_page">Continue shopping</a></button>
+</div>
+</body>
+</html>
