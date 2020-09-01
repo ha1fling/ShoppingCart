@@ -33,6 +33,19 @@ def calculate_total():
         total = total + obj[1]['attributes']['cost']
     return total
 
+
 def save_to_newarray(oldarray, newarray):
     for each in oldarray:
         newarray.append(each)
+
+
+def apply_discount(total, discount):
+    old_total = total
+    if discount == "save20":
+        total = old_total * 0.8
+    elif discount == "half-price":
+        total = old_total * 0.5
+    return total
+
+
+
