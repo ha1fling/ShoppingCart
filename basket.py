@@ -32,3 +32,7 @@ def calculate_total():
     for obj in basket:
         total = total + obj[1]['attributes']['cost']
     return total
+
+def save_to_newarray(oldarray, newarray):
+    for each in oldarray:
+        newarray.append(each)

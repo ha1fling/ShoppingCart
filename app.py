@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from items import data
-from basket import basket, basket_message, add_to_basket, delete_from_basket, delete_all_from_basket, calculate_total
+from basket import basket, basket_message, add_to_basket, delete_from_basket, delete_all_from_basket, calculate_total,\
+    save_to_newarray
 
 
 app = Flask(__name__)
@@ -34,5 +35,7 @@ def clear_basket():
 @app.route('/checkout', methods=['post'])
 def checkout():
     total = calculate_total()
+    bought = []
+    save_to_newarray(basket, bought)
     delete_all_from_basket()
-    return render_template('reciept.html', total=total, basket=basket, items=data)
+    return render_template('reciept.html', total=total, basket=bought, items=data)
