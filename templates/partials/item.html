@@ -1,7 +1,7 @@
-<form class="tile p-1 m-4" method="post">
+<form class="tile p-1 m-4" method="post" action="/add">
     <div>{{ item.attributes.name }}</div>
     <div>{{ item.attributes.cost }}</div>
     <input type="hidden" name="id" value="{{ item.id }}"/>
-    <button type="submit">Add to basket</button>
+    <input type="submit">Add to basket</input>
 </form>
 
