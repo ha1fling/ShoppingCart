@@ -1,14 +1,15 @@
 from flask import Flask, render_template, request, redirect
 from items import data
-from basket import basket, basket_message, add_to_basket, delete_from_basket, delete_all_from_basket
+from basket import basket, basket_message, add_to_basket, delete_from_basket, delete_all_from_basket, calculate_total
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def display_page():
+    total = calculate_total()
     message = basket_message()
-    return render_template('index.html', items=data, basket=basket, message=message)
+    return render_template('index.html', items=data, basket=basket, message=message, total=total)
 
 
 @app.route('/add', methods=['POST'])
