@@ -6,6 +6,7 @@
     {% endfor %}
     {% if basket|length > 0 %}
         {% include 'partials/total_cost.html' %}
+        {% include 'partials/discount_codes.html' %}
         {% include 'partials/clear_basket.html' %}
         {% include 'partials/checkout.html' %}
     {% endif %}
