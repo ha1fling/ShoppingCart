@@ -1,0 +1,72 @@
+[
+  {
+    "_id": 0,
+    "attributes": {
+      "name": "item 1",
+      "cost": 5.00
+    }
+  },
+  {
+  "_id": 1,
+  "attributes": {
+    "name": "item 2",
+    "cost": 5.00
+    }
+  },
+  {
+  "_id": 2,
+  "attributes": {
+    "name": "item 3",
+    "cost": 5.00
+    }
+  },
+  {
+  "_id": 3,
+  "attributes": {
+    "name": "item 4",
+    "cost": 5.00
+    }
+  },
+  {
+    "_id": 4,
+    "attributes": {
+      "name": "item 5",
+      "cost": 5.00
+    }
+  },
+  {
+  "_id": 5,
+  "attributes": {
+    "name": "item 6",
+    "cost": 5.00
+    }
+  },
+  {
+  "_id": 6,
+  "attributes": {
+    "name": "item 7",
+    "cost": 5.00
+    }
+  },
+  {
+  "_id": 7,
+  "attributes": {
+    "name": "item 8",
+    "cost": 5.00
+    }
+  },
+  {
+  "_id": 8,
+  "attributes": {
+    "name": "item 9",
+    "cost": 5.00
+    }
+  },
+  {
+  "_id": 9,
+  "attributes": {
+    "name": "item 10",
+    "cost": 5.00
+    }
+  }
+]

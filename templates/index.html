@@ -18,14 +18,9 @@
 <main class="m-auto pt-5">
     <div class="row">
         <div class="col-8 d-flex flex-row-reverse flex-wrap justify-content-around">
-            {% include 'partials/item.html' %}
-            {% include 'partials/item.html' %}
-            {% include 'partials/item.html' %}
-            {% include 'partials/item.html' %}
-            {% include 'partials/item.html' %}
-            {% include 'partials/item.html' %}
-            {% include 'partials/item.html' %}
-            {% include 'partials/item.html' %}
+            {% for item in items %}
+                {% include 'partials/item.html' %}
+            {% endfor %}
         </div>
         <div class="col-4">
             {% include 'partials/basket.html' %}
