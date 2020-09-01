@@ -1,8 +1,26 @@
-<form action="/delete" method="post">
+<form id="delete" action="/delete" method="post">
     <br/>
     <div>{{ item[1].attributes.name }}</div>
     <div>{{ item[1].attributes.cost }}</div>
     <br/>
     <input type="hidden" name="index" value="{{ item[0] }}"/>
-    <input type="submit" value="&#128465;" />
+    <div class="bin d-flex flex-row">
+        <input type="button" onclick="confirmLeave()" value="&#128465;" />
+        <span class="delete">Remove item from basket</span>
+    </div>
 </form>
+
+<script>
+    function confirmLeave() {
+        if(confirm("Remove item from basket?")) document.getElementById("delete").submit();
+    }
+</script>
+
+<style>
+.delete {
+    display: none;
+}
+.bin:hover .delete {
+    display: block;
+}
+</style>
