@@ -4,12 +4,20 @@
     {% for item in basket %}
         {% include 'partials/basket_item.html' %}
     {% endfor %}
+    {% if basket|length > 0 %}
+        <br/>
+        <form id="clear" method="post" action="/clear">
+            <input type="button" onclick="warning('clear')" value="Clear basket" />
+        </form>
+    {% endif %}
 </div>
+
+<script src="../../static/scripts/warning.js"></script>
 
 <style>
     .basket {
-    width: 95%;
-    height: 95%;
-    background-color: #cccccc;
-}
+        width: 95%;
+        height: 95%;
+        background-color: #cccccc;
+    }
 </style>

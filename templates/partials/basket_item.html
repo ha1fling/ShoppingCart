@@ -5,22 +5,18 @@
     <br/>
     <input type="hidden" name="index" value="{{ item[0] }}"/>
     <div class="bin d-flex flex-row">
-        <input type="button" onclick="confirmLeave()" value="&#128465;" />
+        <input id="button" type="button" onclick="warning('delete')" value="&#128465;" />
         <span class="delete">Remove item from basket</span>
     </div>
 </form>
 
-<script>
-    function confirmLeave() {
-        if(confirm("Remove item from basket?")) document.getElementById("delete").submit();
-    }
-</script>
+<script src="../../static/scripts/warning.js"></script>
 
 <style>
-.delete {
-    display: none;
-}
-.bin:hover .delete {
-    display: block;
-}
+    .delete {
+        display: none;
+    }
+    .bin:hover .delete {
+        display: block;
+    }
 </style>

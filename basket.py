@@ -21,3 +21,7 @@ def delete_from_basket(item):
     for i, obj in enumerate(basket):
         if i == int(item):
             basket.remove(obj)
+
+
+def delete_all_from_basket():
+    basket.clear()
